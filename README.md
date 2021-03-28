@@ -9,8 +9,8 @@
   <a href="#" target="_blank">
     <img alt="License: ISC" src="https://img.shields.io/badge/License-ISC-yellow.svg" />
   </a>
-  <a href="https://twitter.com/hoangnd\_58" target="_blank">
-    <img alt="Twitter: hoangnd\_58" src="https://img.shields.io/twitter/follow/hoangnd\_58.svg?style=social" />
+  <a href="https://twitter.com/hoangnd_58" target="_blank">
+    <img alt="Twitter: hoangnd_58" src="https://img.shields.io/twitter/follow/hoangnd\_58.svg?style=social" />
   </a>
 </p>
 
