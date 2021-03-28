@@ -1,1 +1,1 @@
-export { entity, safeType } from './decorators';
+export { Entity, SafeType } from './decorators';

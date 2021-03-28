@@ -1,2 +1,2 @@
-export { default as entity } from './entity';
-export { default as safeType } from './safeType';
+export { default as Entity } from './entity';
+export { default as SafeType } from './safeType';
