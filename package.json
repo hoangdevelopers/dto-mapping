@@ -1,6 +1,6 @@
 {
   "name": "dto-mapping",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A nice greeThe dto-mapping is a mapping library to facilitate the conversion of an entity bean to a similar DTO (Data Transfer Object) bean or reverseter",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
