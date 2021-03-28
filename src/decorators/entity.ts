@@ -10,7 +10,7 @@ export default function Entity() {
         super(model, ...args);
         const context = this as any;
         const data = (context['__data__'] = {} as any);
-        const metaData = (context['__meta__'] as any[]);
+        const metaData = context['__meta__'] as any[];
         metaData.map((meta: any) => {
           const { propertyKey, type } = meta;
           const descriptor = {
