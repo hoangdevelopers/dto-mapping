@@ -1,7 +1,7 @@
 {
   "name": "dto-mapping",
   "version": "1.0.0",
-  "description": "A nice greeThe entity-dto-mapper is a mapping library to facilitate the convertion of an entity bean to a similar DTO (Data Transfer Object) bean or reverseter",
+  "description": "A nice greeThe dto-mapping is a mapping library to facilitate the conversion of an entity bean to a similar DTO (Data Transfer Object) bean or reverseter",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -14,7 +14,12 @@
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags"
   },
-  "keywords": ["DTO", "mapping", "decorator", "typescript"],
+  "keywords": [
+    "DTO",
+    "mapping",
+    "decorator",
+    "typescript"
+  ],
   "author": "Hoang Nguyen",
   "license": "ISC",
   "devDependencies": {
@@ -25,5 +30,6 @@
   },
   "files": [
     "lib/**/*"
-  ]
+  ],
+  "dependencies": {}
 }
