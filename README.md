@@ -66,7 +66,7 @@ Create DTO instance:
 const user = new User(model)
 ```
 
-![sample](assets/01.jpg)
+![sample](https://github.com/hoangdevelopers/dto-mapping/blob/main/assets/01.jpg)
 
 
 ## Run tests
