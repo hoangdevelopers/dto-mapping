@@ -1,4 +1,4 @@
-export default function SafeType(opts: { type: any }) {
+export function SafeType(opts: { type: any }) {
   return function (...args: any) {
     const [target, propertyKey, descriptor] = args;
     if (!target['__meta__']) target['__meta__'] = [];

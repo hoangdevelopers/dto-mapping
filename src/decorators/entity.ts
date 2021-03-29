@@ -1,6 +1,6 @@
 import { isNil } from '../ultis';
 
-export default function Entity() {
+export function Entity() {
   const getPrivateName = (name: string) => `__HIDDEN__${name}`;
   const PRIMITIVE = [Number, String, Boolean];
   const constructData = (type: any, value: any) => (PRIMITIVE.includes(type) ? type(value) : new type(value));

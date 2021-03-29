@@ -1,1 +1,1 @@
-export { default as isNil } from './isNil';
+export { isNil } from './isNil';
