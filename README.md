@@ -36,6 +36,9 @@ class Info {
   age?: Number
   @SafeType({ type: Number })
   numbers?: Number[]
+  showAge() {
+    console.log(`i'm ${this.age}`)
+  }
 }
 
 @Entity()
@@ -65,6 +68,15 @@ Create DTO instance:
 ```typescript
 const user = new User(model)
 ```
+
+Then you can use method of info entity:
+```typescript
+user.info.showAge()
+```
+
+## The feature will be implemented in the next version
+- omit properties
+- rewrite properties name
 
 ![sample](https://github.com/hoangdevelopers/dto-mapping/blob/main/assets/01.jpg)
 
