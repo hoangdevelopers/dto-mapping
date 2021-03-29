@@ -30,6 +30,9 @@ export function Entity() {
         Object.defineProperties(this, {
           __data__: { writable: true, enumerable: false },
         });
+        Object.defineProperties(this, {
+          __meta__: { writable: true, enumerable: false },
+        });
         Object.assign(context, model);
       }
     };
