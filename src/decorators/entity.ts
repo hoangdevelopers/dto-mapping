@@ -1,4 +1,5 @@
 import { isNil } from '../ultis';
+import { IMeta } from './meta';
 
 export function Entity() {
   const getPrivateName = (name: string) => `__HIDDEN__${name}`;
@@ -10,8 +11,12 @@ export function Entity() {
         super(model, ...args);
         const context = this as any;
         const data = (context['__data__'] = {} as any);
-        const metaData = context['__meta__'] as any[];
-        metaData.map((meta: any) => {
+        const metaData = (context['__meta__'] || new Map<string, IMeta>()) as Map<string, IMeta>;
+        Array.from(metaData.values()).filter(meta => meta.transform).map((meta: IMeta) => {
+          const { propertyKey, transform } = meta;
+          model[propertyKey] = transform?.fn(model, propertyKey)
+        });
+        Array.from(metaData.values()).filter(meta => !!meta.type).map((meta: IMeta) => {
           const { propertyKey, type } = meta;
           const descriptor = {
             set: function (value: any) {

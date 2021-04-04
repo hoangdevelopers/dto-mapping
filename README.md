@@ -30,50 +30,77 @@ npm install dto-mapping
 
 Create some DTO class:
 ```typescript
-@Entity()
-class Info {
-  @SafeType({ type: Number })
-  age?: Number
-  @SafeType({ type: Number })
-  numbers?: Number[]
-  showAge() {
-    console.log(`i'm ${this.age}`)
+  @Entity()
+  class Info {
+    @SafeType({ type: Number })
+    age?: Number
+    @SafeType({ type: Number })
+    numbers?: Number[]
+    showAge() {
+      console.log(`i'm ${this.age}`)
+    }
   }
-}
 
-@Entity()
-class User {
-  @SafeType({ type: String })
-  name?: String
-  @SafeType({ type: Info })
-  info?: Info
-  constructor(obj: any) {}
-}
+  @Entity()
+  class User {
+    @SafeType({ type: String })
+    name?: String
+    @SafeType({ type: Info })
+    info?: Info
+    constructor(obj: any) {}
+  }
 ```
 
 Create an model is implemented by the User class:
 
 ```typescript
-const model = { 
-  name: "1", 
-  info: { 
-      age: '1', 
-      numbers: [1, 2, "3"] 
-    } 
-}
+  const model = { 
+    name: "1", 
+    info: { 
+        age: '1', 
+        numbers: [1, 2, "3"] 
+      } 
+  }
 ```
 
 Create DTO instance:
 
 ```typescript
-const user = new User(model)
+  const user = new User(model)
 ```
 
 Then you can use method of info entity:
 ```typescript
-user.info.showAge()
+  user.info.showAge()
 ```
 
+## Feature
+- Convert model to DTO "@SafeType"
+- Transform data "Transform"
+
+Sample: 
+```typescript
+  @Entity()
+    class Location {
+        code: string = ''
+        constructor(model: any) {}
+        getLocation = () => `My location is ${this.code}`
+    }
+    @Entity()
+    class User {
+        @Transform({fn: (model: any, field: string) => model[field] 
+            && model[field]
+            .split(',')
+            .map((code: string) => ({
+                code
+            }))})
+        @SafeType({type: Location})
+        locations: Location[] = []
+        constructor(model: any) {}
+    }
+```
+
+Read more : https://github.com/hoangdevelopers/dto-mapping/blob/main/src/tests/transform.test.ts
 ## The feature will be implemented in the next version
 - omit properties
 - rewrite properties name
