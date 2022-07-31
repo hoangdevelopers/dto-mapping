@@ -1,6 +1,6 @@
 {
   "name": "dto-mapping",
-  "version": "1.0.23",
+  "version": "1.1.01",
   "description": "A great dto-mapping is a mapping library to facilitate the conversion of an entity bean to a similar DTO (Data Transfer Object) bean or reverse",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
