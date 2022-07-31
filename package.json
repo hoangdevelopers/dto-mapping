@@ -1,7 +1,7 @@
 {
   "name": "dto-mapping",
-  "version": "1.0.22",
-  "description": "A nice greeThe dto-mapping is a mapping library to facilitate the conversion of an entity bean to a similar DTO (Data Transfer Object) bean or reverseter",
+  "version": "1.0.23",
+  "description": "A great dto-mapping is a mapping library to facilitate the conversion of an entity bean to a similar DTO (Data Transfer Object) bean or reverse",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -29,7 +29,8 @@
     "@babel/plugin-proposal-decorators": "^7.13.5",
     "@babel/preset-env": "^7.13.12",
     "@babel/preset-typescript": "^7.13.0",
-    "@types/jest": "^26.0.22",
+    "@types/jest": "^26.0.24",
+    "@types/lodash.clonedeep": "^4.5.7",
     "babel-jest": "^26.6.3",
     "jest": "^26.6.3",
     "prettier": "^2.2.1",
@@ -41,5 +42,7 @@
   "files": [
     "lib/**/*"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "lodash.clonedeep": "^4.5.0"
+  }
 }
